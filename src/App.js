@@ -7,6 +7,7 @@ import Profile from './pages/user/Profile';
 import {Routes, Route, Link} from "react-router-dom";
 import User from './pages/user/User';
 import ProtectedRoute from './Utility/ProtectedRoute';
+import Proof from './pages/proof';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
               <li>
                   <Link to="/user">User</Link>
               </li>
+              <li>
+                  <Link to="./proof">Proof</Link>
+              </li>
           </ul>
         </nav>
       </header>
@@ -43,6 +47,7 @@ function App() {
                     <User />
                 </ProtectedRoute>
             } />
+            <Route path="/proof" element={<Proof />} />
         </Routes>
       </main>
     </div>
